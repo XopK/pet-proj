@@ -17,7 +17,7 @@
 1. Клонируйте репозиторий:
 
    ```bash 
-   git clone [https://github.com/XopK/pet-proj.git](https://github.com/XopK/pet-proj.git)  
+   git clone https://github.com/XopK/pet-proj.git
    cd pet-proj
 
 2. Установите зависимости PHP с помощью Composer:
