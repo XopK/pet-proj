@@ -16,10 +16,7 @@ const isLoading = ref(true);
 // Получение данных через Inertia
 const props = usePage().props;
 const recipes = computed(() => props.recipes || []);
-
-console.log('Props:', props); // Для проверки props
-console.log('Recipes:', recipes.value); // Для проверки рецептов
-console.log('Is Array:', Array.isArray(recipes.value)); // Проверка, является ли recipes массивом
+const categories = computed(() => props.categories || []);
 
 onMounted(() => {
     isLoading.value = false;
@@ -35,8 +32,8 @@ onMounted(() => {
         <div v-else>
             <Header/>
             <Hero/>
-            <Recipes :recipes="recipes" />
-            <Categories/>
+            <Recipes :recipes="recipes"/>
+            <Categories :categories="categories"/>
             <Comments/>
             <Footer/>
         </div>

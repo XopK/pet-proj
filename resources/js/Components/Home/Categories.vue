@@ -23,19 +23,11 @@
 
 <script>
 export default {
-    data() {
-        return {
-            categories: [
-                { id: 1, name: 'Завтраки', icon: 'fas fa-coffee' },
-                { id: 2, name: 'Обеды', icon: 'fas fa-utensils' },
-                { id: 3, name: 'Ужины', icon: 'fas fa-wine-glass-alt' },
-                { id: 4, name: 'Десерты', icon: 'fas fa-ice-cream' },
-                { id: 5, name: 'Напитки', icon: 'fas fa-cocktail' },
-                { id: 6, name: 'Вегетарианские', icon: 'fas fa-leaf' },
-                { id: 7, name: 'Закуски', icon: 'fas fa-hamburger' },
-                { id: 8, name: 'Морепродукты', icon: 'fas fa-fish' },
-            ],
-        };
+    props: {
+        categories: {
+            type: Array,
+            required: true
+        }
     },
 };
 </script>
